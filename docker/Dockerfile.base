@@ -4,3 +4,6 @@ LABEL maintainer=jon@jaggersoft.com
 RUN apk update
 RUN apk add bash
 RUN apk add jq
+
+COPY install.sh .
+RUN ./install.sh && rm ./install.sh
